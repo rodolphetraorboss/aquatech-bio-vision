@@ -1,1682 +1,2090 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>AQUATECH BIO VISION | Piscines, Jets d'eau & Solutions Aquatiques</title>
-
-    <meta name="description"
-          content="AQUATECH BIO VISION - Conception, construction, entretien de piscines, jets d'eau et solutions aquatiques au Burkina Faso.">
-
-    <style>
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #eaf8ff;
-            color: #102a43;
-            line-height: 1.6;
-        }
-
-        /* ================================
-           BARRE SUPERIEURE BURKINA FASO
-        ================================= */
-
-        .burkina-bar {
-            height: 8px;
-            display: flex;
-            width: 100%;
-        }
-
-        .burkina-red {
-            width: 50%;
-            background: #ef2b2d;
-        }
-
-        .burkina-green {
-            width: 50%;
-            background: #009e49;
-        }
-
-        /* ================================
-           HEADER
-        ================================= */
-
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: rgba(0, 70, 130, 0.97);
-            box-shadow: 0 4px 18px rgba(0,0,0,0.25);
-        }
-
-        .navbar {
-            max-width: 1250px;
-            margin: auto;
-            padding: 15px 25px;
-
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            color: white;
-            text-decoration: none;
-        }
-
-        .logo-icon {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            background: white;
-            color: #0066a1;
-
-            font-size: 27px;
-            font-weight: 900;
-
-            box-shadow: 0 3px 10px rgba(0,0,0,0.25);
-        }
-
-        .logo-text {
-            font-size: 23px;
-            font-weight: 900;
-            letter-spacing: 1px;
-        }
-
-        .logo-subtitle {
-            font-size: 11px;
-            color: #ffe000;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-
-        nav {
-            display: flex;
-            align-items: center;
-            gap: 7px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: 800;
-            font-size: 14px;
-            padding: 10px 12px;
-            border-radius: 7px;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            background: #00a8e8;
-            color: white;
-        }
-
-        .flag {
-            font-size: 23px;
-            margin-left: 5px;
-        }
-
-        /* ================================
-           HERO
-        ================================= */
-
-        .hero {
-            min-height: 680px;
-
-            background:
-                linear-gradient(
-                    rgba(0, 67, 120, 0.60),
-                    rgba(0, 28, 65, 0.75)
-                ),
-             url("photop2.jpeg");
-
-            background-size: cover;
-            background-position: center;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            text-align: center;
-            padding: 80px 20px;
-
-            color: white;
-        }
-
-        .hero-content {
-            max-width: 1000px;
-        }
-
-        .hero h1 {
-            font-size: clamp(40px, 7vw, 78px);
-            font-weight: 1000;
-            letter-spacing: 2px;
-            text-shadow: 0 4px 15px rgba(0,0,0,0.6);
-            margin-bottom: 15px;
-        }
-
-        .hero h2 {
-            font-size: clamp(20px, 3vw, 34px);
-            font-weight: 900;
-            color: #ffe000;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            font-size: 19px;
-            font-weight: 700;
-            max-width: 800px;
-            margin: auto;
-            text-shadow: 0 2px 7px rgba(0,0,0,0.8);
-        }
-
-        .hero-buttons {
-            margin-top: 35px;
-
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 15px 28px;
-            border-radius: 8px;
-
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: 900;
-
-            transition: 0.3s;
-        }
-
-        .btn-primary {
-            background: #00a8e8;
-            color: white;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.25);
-        }
-
-        .btn-primary:hover {
-            background: #008ac1;
-            transform: translateY(-3px);
-        }
-
-        .btn-yellow {
-            background: #ffe000;
-            color: #111;
-        }
-
-        .btn-yellow:hover {
-            background: #ffd000;
-            transform: translateY(-3px);
-        }
-
-        /* ================================
-           SECTIONS
-        ================================= */
-
-        section {
-            padding: 80px 20px;
-        }
-
-        .section-container {
-            max-width: 1200px;
-            margin: auto;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .section-title h2 {
-            color: #005b96;
-            font-size: 38px;
-            font-weight: 1000;
-            margin-bottom: 12px;
-        }
-
-        .section-title p {
-            color: #46627a;
-            font-size: 17px;
-            font-weight: 600;
-        }
-
-        .title-line {
-            width: 90px;
-            height: 5px;
-            background: #ffe000;
-            margin: 15px auto;
-            border-radius: 20px;
-        }
-
-        /* ================================
-           A PROPOS
-        ================================= */
-
-        .about {
-            background: white;
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 45px;
-            align-items: center;
-        }
-
-        .about-image {
-            width: 100%;
-            min-height: 420px;
-
-            background:
-                linear-gradient(
-                    rgba(0,80,140,0.20),
-                    rgba(0,80,140,0.20)
-                ),
-                url("photop2.jpeg");
-
-            background-size: cover;
-            background-position: center;
-
-            border-radius: 18px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.18);
-        }
-
-        .about-text h3 {
-            font-size: 30px;
-            color: #005b96;
-            font-weight: 1000;
-            margin-bottom: 18px;
-        }
-
-        .about-text p {
-            font-size: 17px;
-            font-weight: 600;
-            margin-bottom: 15px;
-            color: #334e68;
-        }
-
-        .about-list {
-            margin-top: 20px;
-            list-style: none;
-        }
-
-        .about-list li {
-            margin-bottom: 12px;
-            font-weight: 800;
-            color: #174a68;
-        }
-
-        .about-list li::before {
-            content: "✓";
-            color: #009e49;
-            font-size: 20px;
-            font-weight: 1000;
-            margin-right: 10px;
-        }
-
-        /* ================================
-           SERVICES
-        ================================= */
-
-        .services {
-            background:
-                linear-gradient(
-                    rgba(0, 91, 150, 0.94),
-                    rgba(0, 49, 90, 0.97)
-                );
-            color: white;
-        }
-
-        .services .section-title h2 {
-            color: white;
-        }
-
-        .services .section-title p {
-            color: #d9f4ff;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-
-        .service-card {
-            background: rgba(255,255,255,0.10);
-            border: 1px solid rgba(255,255,255,0.18);
-
-            padding: 35px 25px;
-
-            border-radius: 15px;
-
-            text-align: center;
-
-            transition: 0.3s;
-        }
-
-        .service-card:hover {
-            transform: translateY(-8px);
-            background: rgba(255,255,255,0.16);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.25);
-        }
-
-        .service-icon {
-            width: 75px;
-            height: 75px;
-
-            margin: auto auto 20px;
-
-            border-radius: 50%;
-
-            background: #ffe000;
-            color: #005b96;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            font-size: 34px;
-            font-weight: 900;
-        }
-
-        .service-card h3 {
-            font-size: 22px;
-            font-weight: 1000;
-            margin-bottom: 12px;
-        }
-
-        .service-card p {
-            font-weight: 600;
-            color: #e5f7ff;
-        }
-
-        /* ================================
-           VIDEO
-        ================================= */
-
-        .videos {
-            background: #e9f8ff;
-        }
-
-        .video-intro {
-            max-width: 800px;
-            margin: -20px auto 40px;
-            text-align: center;
-
-            font-size: 17px;
-            font-weight: 600;
-            color: #385a72;
-        }
-
-        .video-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-        }
-
-        .video-card {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-
-            box-shadow: 0 8px 25px rgba(0,0,0,0.14);
-
-            transition: 0.3s;
-        }
-
-        .video-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .video-card video {
-            display: block;
-            width: 100%;
-            height: 330px;
-            object-fit: cover;
-            background: #001f3f;
-        }
-
-        .video-content {
-            padding: 20px;
-        }
-
-        .video-content h3 {
-            color: #005b96;
-            font-size: 22px;
-            font-weight: 1000;
-            margin-bottom: 8px;
-        }
-
-        .video-content p {
-            font-weight: 600;
-            color: #536f82;
-        }
-
-        /* ================================
-           GALERIE
-        ================================= */
-
-        .gallery {
-            background: white;
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 18px;
-        }
-
-        .gallery-item {
-            height: 270px;
-            overflow: hidden;
-            border-radius: 12px;
-            position: relative;
-            background: #cfefff;
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: 0.5s;
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.08);
-        }
-
-        /* ================================
-           REALISATIONS
-        ================================= */
-
-        .projects {
-            background: #f2fbff;
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-
-        .project-card {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
-        }
-
-        .project-card img {
-            width: 100%;
-            height: 230px;
-            object-fit: cover;
-        }
-
-        .project-card-content {
-            padding: 22px;
-        }
-
-        .project-card h3 {
-            color: #005b96;
-            font-size: 21px;
-            font-weight: 1000;
-            margin-bottom: 8px;
-        }
-
-        .project-card p {
-            font-weight: 600;
-            color: #526b7c;
-        }
-
-        /* ================================
-           POURQUOI NOUS
-        ================================= */
-
-        .advantages {
-            background: white;
-        }
-
-        .advantages-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-        }
-
-        .advantage {
-            padding: 28px 18px;
-            border-radius: 12px;
-            background: #eefaff;
-            text-align: center;
-            border-top: 5px solid #0066a1;
-        }
-
-        .advantage strong {
-            display: block;
-            font-size: 20px;
-            font-weight: 1000;
-            color: #005b96;
-            margin-bottom: 8px;
-        }
-
-        .advantage p {
-            font-weight: 600;
-            color: #4e6878;
-        }
-
-        /* ================================
-           CONTACT
-        ================================= */
-
-        .contact {
-            background:
-                linear-gradient(
-                    rgba(0, 66, 115, 0.96),
-                    rgba(0, 31, 61, 0.98)
-                );
-            color: white;
-        }
-
-        .contact .section-title h2 {
-            color: white;
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 35px;
-        }
-
-        .contact-box {
-            background: rgba(255,255,255,0.09);
-            padding: 30px;
-            border-radius: 15px;
-            border: 1px solid rgba(255,255,255,0.15);
-        }
-
-        .contact-box h3 {
-            color: #ffe000;
-            font-size: 25px;
-            font-weight: 1000;
-            margin-bottom: 20px;
-        }
-
-        .contact-item {
-            margin-bottom: 18px;
-            font-size: 17px;
-            font-weight: 700;
-        }
-
-        .contact-item span {
-            display: block;
-            color: #bfeaff;
-            font-size: 13px;
-            margin-bottom: 3px;
-        }
-
-        .contact-item a {
-            color: white;
-            text-decoration: none;
-            font-weight: 900;
-        }
-
-        .contact-item a:hover {
-            color: #ffe000;
-        }
-
-        /* ================================
-           WHATSAPP
-        ================================= */
-
-        .whatsapp {
-            position: fixed;
-            right: 22px;
-            bottom: 22px;
-
-            width: 62px;
-            height: 62px;
-
-            border-radius: 50%;
-
-            background: #25d366;
-            color: white;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            font-size: 30px;
-            font-weight: 1000;
-
-            text-decoration: none;
-
-            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
-
-            z-index: 2000;
-
-            transition: 0.3s;
-        }
-
-        .whatsapp:hover {
-            transform: scale(1.1);
-        }
-
-        /* ================================
-           FOOTER
-        ================================= */
-
-        footer {
-            background: #001f3f;
-            color: white;
-            text-align: center;
-            padding: 35px 20px;
-        }
-
-        footer h3 {
-            font-size: 24px;
-            font-weight: 1000;
-            margin-bottom: 8px;
-        }
-
-        footer p {
-            color: #bcd8e8;
-            font-weight: 600;
-        }
-
-        .footer-flag {
-            display: flex;
-            width: 100px;
-            height: 5px;
-            margin: 20px auto;
-        }
-
-        .footer-red {
-            width: 50%;
-            background: #ef2b2d;
-        }
-
-        .footer-green {
-            width: 50%;
-            background: #009e49;
-        }
-
-        /* ================================
-           RESPONSIVE
-        ================================= */
-
-        @media (max-width: 950px) {
-
-            .navbar {
-                flex-direction: column;
-            }
-
-            nav {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .about-grid,
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .services-grid,
-            .projects-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .advantages-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .gallery-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-        }
-
-        @media (max-width: 650px) {
-
-            .logo-text {
-                font-size: 18px;
-            }
-
-            .hero {
-                min-height: 600px;
-            }
-
-            .hero h1 {
-                font-size: 42px;
-            }
-
-            .hero h2 {
-                font-size: 21px;
-            }
-
-            .hero p {
-                font-size: 16px;
-            }
-
-            section {
-                padding: 60px 15px;
-            }
-
-            .section-title h2 {
-                font-size: 30px;
-            }
-
-            .services-grid,
-            .projects-grid,
-            .video-grid,
-            .advantages-grid,
-            .gallery-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .video-card video {
-                height: 240px;
-            }
-
-            .gallery-item {
-                height: 250px;
-            }
-
-            nav a {
-                font-size: 12px;
-                padding: 8px;
-            }
-
-        }
-
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AQUATECH BIO VISION | Solutions Aquatiques</title>
+
+<style>
+
+/* =========================
+   CONFIGURATION GENERALE
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #eaf8ff;
+    color: #102a43;
+    line-height: 1.6;
+}
+
+/* =========================
+   DRAPEAU BURKINA FASO
+========================= */
+
+.burkina-bar {
+    height: 8px;
+    display: flex;
+}
+
+.burkina-red {
+    width: 50%;
+    background: #ef2b2d;
+}
+
+.burkina-green {
+    width: 50%;
+    background: #009e49;
+}
+
+/* =========================
+   MENU
+========================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(0, 60, 110, 0.98);
+    box-shadow: 0 4px 18px rgba(0,0,0,0.25);
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 12px 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.logo-icon {
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    background: white;
+    color: #0066a1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.logo-text {
+    font-size: 21px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.logo-subtitle {
+    font-size: 10px;
+    color: #ffe000;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 900;
+
+    padding: 8px 10px;
+
+    border-radius: 6px;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: #00a8e8;
+}
+
+.flag {
+    font-size: 22px;
+}
+
+/* =========================
+   ACCUEIL
+========================= */
+
+.hero {
+
+    min-height: 600px;
+
+    background:
+
+        linear-gradient(
+            rgba(0, 67, 120, 0.55),
+            rgba(0, 28, 65, 0.70)
+        ),
+
+        url("photop2.jpeg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    color: white;
+
+    padding: 60px 20px;
+}
+
+.hero-content {
+    max-width: 900px;
+}
+
+.hero h1 {
+
+    font-size: clamp(38px, 6vw, 68px);
+
+    font-weight: 1000;
+
+    letter-spacing: 2px;
+
+    text-shadow:
+        0 4px 15px rgba(0,0,0,0.7);
+
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+
+    font-size: clamp(18px, 3vw, 30px);
+
+    font-weight: 900;
+
+    color: #ffe000;
+
+    margin-bottom: 18px;
+}
+
+.hero p {
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    max-width: 750px;
+
+    margin: auto;
+
+    text-shadow:
+        0 2px 8px rgba(0,0,0,0.8);
+}
+
+.hero-buttons {
+
+    margin-top: 28px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+.btn {
+
+    display: inline-block;
+
+    padding: 13px 24px;
+
+    border-radius: 7px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 900;
+
+    transition: 0.3s;
+}
+
+.btn-primary {
+
+    background: #00a8e8;
+
+    color: white;
+}
+
+.btn-primary:hover {
+
+    background: #007fae;
+
+    transform: translateY(-3px);
+}
+
+.btn-yellow {
+
+    background: #ffe000;
+
+    color: #111;
+}
+
+.btn-yellow:hover {
+
+    background: #ffd000;
+
+    transform: translateY(-3px);
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+section {
+
+    padding: 65px 20px;
+}
+
+.section-container {
+
+    max-width: 1150px;
+
+    margin: auto;
+}
+
+.section-title {
+
+    text-align: center;
+
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+
+    color: #005b96;
+
+    font-size: 34px;
+
+    font-weight: 1000;
+}
+
+.title-line {
+
+    width: 75px;
+
+    height: 4px;
+
+    background: #ffe000;
+
+    margin: 12px auto;
+
+    border-radius: 20px;
+}
+
+.section-title p {
+
+    color: #46627a;
+
+    font-size: 15px;
+
+    font-weight: 600;
+}
+
+/* =========================
+   A PROPOS
+========================= */
+
+.about {
+
+    background: white;
+}
+
+.about-grid {
+
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 35px;
+
+    align-items: center;
+}
+
+/* PHOTO REDUITE */
+
+.about-image {
+
+    width: 100%;
+
+    height: 330px;
+
+    background:
+
+        linear-gradient(
+            rgba(0,80,140,0.15),
+            rgba(0,80,140,0.15)
+        ),
+
+        url("photop2.jpeg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.18);
+}
+
+.about-text h3 {
+
+    font-size: 27px;
+
+    color: #005b96;
+
+    font-weight: 1000;
+
+    margin-bottom: 12px;
+}
+
+.about-text p {
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    margin-bottom: 12px;
+
+    color: #334e68;
+}
+
+.about-list {
+
+    margin-top: 15px;
+
+    list-style: none;
+}
+
+.about-list li {
+
+    margin-bottom: 8px;
+
+    font-weight: 800;
+}
+
+.about-list li::before {
+
+    content: "✓";
+
+    color: #009e49;
+
+    font-size: 18px;
+
+    font-weight: 1000;
+
+    margin-right: 8px;
+}
+
+/* =========================
+   SERVICES
+========================= */
+
+.services {
+
+    background:
+        linear-gradient(
+            rgba(0, 91, 150, 0.96),
+            rgba(0, 49, 90, 0.98)
+        );
+
+    color: white;
+}
+
+.services .section-title h2 {
+
+    color: white;
+}
+
+.services .section-title p {
+
+    color: #d9f4ff;
+}
+
+.services-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.service-card {
+
+    background:
+        rgba(255,255,255,0.10);
+
+    border:
+        1px solid rgba(255,255,255,0.18);
+
+    padding: 25px 20px;
+
+    border-radius: 13px;
+
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+.service-card:hover {
+
+    transform:
+        translateY(-6px);
+
+    background:
+        rgba(255,255,255,0.16);
+}
+
+.service-icon {
+
+    width: 65px;
+    height: 65px;
+
+    margin:
+        auto auto 15px;
+
+    border-radius: 50%;
+
+    background: #ffe000;
+
+    color: #005b96;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 28px;
+
+    font-weight: 900;
+}
+
+.service-card h3 {
+
+    font-size: 20px;
+
+    font-weight: 1000;
+
+    margin-bottom: 8px;
+}
+
+.service-card p {
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #e5f7ff;
+}
+
+/* =========================
+   VIDEOS
+========================= */
+
+.videos {
+
+    background: #e9f8ff;
+}
+
+.video-intro {
+
+    max-width: 700px;
+
+    margin:
+        -15px auto 30px;
+
+    text-align: center;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    color: #385a72;
+}
+
+.video-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.video-card {
+
+    background: white;
+
+    border-radius: 13px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 7px 20px rgba(0,0,0,0.14);
+
+    transition: 0.3s;
+}
+
+.video-card:hover {
+
+    transform:
+        translateY(-5px);
+}
+
+/* VIDEOS PLUS PETITES */
+
+.video-card video {
+
+    display: block;
+
+    width: 100%;
+
+    height: 250px;
+
+    object-fit: cover;
+
+    background: #001f3f;
+}
+
+.video-content {
+
+    padding: 17px;
+}
+
+.video-content h3 {
+
+    color: #005b96;
+
+    font-size: 20px;
+
+    font-weight: 1000;
+
+    margin-bottom: 5px;
+}
+
+.video-content p {
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #536f82;
+}
+
+/* =========================
+   GALERIE
+========================= */
+
+.gallery {
+
+    background: white;
+}
+
+.gallery-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+.gallery-item {
+
+    height: 190px;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    background: #cfefff;
+}
+
+.gallery-item img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.4s;
+}
+
+.gallery-item:hover img {
+
+    transform:
+        scale(1.06);
+}
+
+/* =========================
+   REALISATIONS
+========================= */
+
+.projects {
+
+    background: #f2fbff;
+}
+
+.projects-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.project-card {
+
+    background: white;
+
+    border-radius: 13px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 7px 20px rgba(0,0,0,0.12);
+}
+
+.project-card img {
+
+    width: 100%;
+
+    height: 190px;
+
+    object-fit: cover;
+}
+
+.project-card-content {
+
+    padding: 18px;
+}
+
+.project-card h3 {
+
+    color: #005b96;
+
+    font-size: 19px;
+
+    font-weight: 1000;
+
+    margin-bottom: 5px;
+}
+
+.project-card p {
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #526b7c;
+}
+
+/* =========================
+   AVANTAGES
+========================= */
+
+.advantages {
+
+    background: white;
+}
+
+.advantages-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+}
+
+.advantage {
+
+    padding: 22px 15px;
+
+    border-radius: 10px;
+
+    background: #eefaff;
+
+    text-align: center;
+
+    border-top:
+        4px solid #0066a1;
+}
+
+.advantage strong {
+
+    display: block;
+
+    font-size: 18px;
+
+    font-weight: 1000;
+
+    color: #005b96;
+
+    margin-bottom: 5px;
+}
+
+.advantage p {
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    color: #4e6878;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+
+    background:
+        linear-gradient(
+            rgba(0,66,115,0.97),
+            rgba(0,31,61,0.99)
+        );
+
+    color: white;
+}
+
+.contact .section-title h2 {
+
+    color: white;
+}
+
+.contact-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.contact-box {
+
+    background:
+        rgba(255,255,255,0.09);
+
+    padding: 25px;
+
+    border-radius: 13px;
+
+    border:
+        1px solid rgba(255,255,255,0.15);
+}
+
+.contact-box h3 {
+
+    color: #ffe000;
+
+    font-size: 22px;
+
+    font-weight: 1000;
+
+    margin-bottom: 15px;
+}
+
+.contact-item {
+
+    margin-bottom: 14px;
+
+    font-size: 15px;
+
+    font-weight: 700;
+}
+
+.contact-item span {
+
+    display: block;
+
+    color: #bfeaff;
+
+    font-size: 11px;
+
+    margin-bottom: 2px;
+}
+
+.contact-item a {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: 900;
+}
+
+.contact-item a:hover {
+
+    color: #ffe000;
+}
+
+/* =========================
+   WHATSAPP
+========================= */
+
+.whatsapp {
+
+    position: fixed;
+
+    right: 20px;
+
+    bottom: 20px;
+
+    width: 58px;
+
+    height: 58px;
+
+    border-radius: 50%;
+
+    background: #25d366;
+
+    color: white;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 25px;
+
+    font-weight: 1000;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.3);
+
+    z-index: 2000;
+
+    transition: 0.3s;
+}
+
+.whatsapp:hover {
+
+    transform:
+        scale(1.1);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    background: #001f3f;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 28px 20px;
+}
+
+footer h3 {
+
+    font-size: 21px;
+
+    font-weight: 1000;
+}
+
+footer p {
+
+    font-size: 13px;
+
+    color: #bcd8e8;
+
+    font-weight: 600;
+}
+
+.footer-flag {
+
+    display: flex;
+
+    width: 90px;
+
+    height: 4px;
+
+    margin: 15px auto;
+}
+
+.footer-red {
+
+    width: 50%;
+
+    background: #ef2b2d;
+}
+
+.footer-green {
+
+    width: 50%;
+
+    background: #009e49;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 950px) {
+
+    .navbar {
+
+        flex-direction: column;
+    }
+
+    nav {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .about-grid,
+    .contact-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .services-grid,
+    .projects-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .advantages-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .gallery-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+
+    .logo-text {
+
+        font-size: 17px;
+    }
+
+    .hero {
+
+        min-height: 550px;
+    }
+
+    .hero h1 {
+
+        font-size: 40px;
+    }
+
+    .hero h2 {
+
+        font-size: 20px;
+    }
+
+    .hero p {
+
+        font-size: 15px;
+    }
+
+    section {
+
+        padding: 50px 15px;
+    }
+
+    .section-title h2 {
+
+        font-size: 28px;
+    }
+
+    .services-grid,
+    .projects-grid,
+    .video-grid,
+    .advantages-grid,
+    .gallery-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .video-card video {
+
+        height: 220px;
+    }
+
+    .gallery-item {
+
+        height: 180px;
+    }
+
+    .project-card img {
+
+        height: 180px;
+    }
+
+    nav a {
+
+        font-size: 11px;
+
+        padding: 7px;
+    }
+}
+
+</style>
 </head>
+
 
 <body>
 
-<!-- ================================
-     DRAPEAU BURKINA FASO
-================================= -->
+
+<!-- =========================
+     DRAPEAU BURKINA
+========================= -->
 
 <div class="burkina-bar">
+
     <div class="burkina-red"></div>
+
     <div class="burkina-green"></div>
+
 </div>
 
 
-<!-- ================================
-     HEADER
-================================= -->
+<!-- =========================
+     MENU
+========================= -->
 
 <header>
 
-    <div class="navbar">
+<div class="navbar">
 
-        <a href="#accueil" class="logo">
+<a href="#accueil" class="logo">
 
-            <div class="logo-icon">
-                💧
-            </div>
+<div class="logo-icon">
+💧
+</div>
 
-            <div>
-                <div class="logo-text">
-                    AQUATECH BIO VISION
-                </div>
+<div>
 
-                <div class="logo-subtitle">
-                    SOLUTIONS AQUATIQUES PROFESSIONNELLES
-                </div>
-            </div>
+<div class="logo-text">
+AQUATECH BIO VISION
+</div>
 
-        </a>
+<div class="logo-subtitle">
+SOLUTIONS AQUATIQUES PROFESSIONNELLES
+</div>
 
-        <nav>
-
-            <a href="#accueil">Accueil</a>
-            <a href="#apropos">À propos</a>
-            <a href="#services">Services</a>
-            <a href="#videos">Vidéos</a>
-            <a href="#galerie">Galerie</a>
-            <a href="#realisations">Réalisations</a>
-            <a href="#contact">Contact</a>
-
-            <span class="flag">🇧🇫</span>
-
-        </nav>
-
-    </div>
-
-</header>
-
-
-<!-- ================================
-     ACCUEIL
-================================= -->
-
-<section class="hero" id="accueil">
-
-    <div class="hero-content">
-
-        <h1>
-            AQUATECH BIO VISION
-        </h1>
-
-        <h2>
-            L'EXCELLENCE AU SERVICE DE L'EAU
-        </h2>
-
-        <p>
-            Conception, réalisation, aménagement et entretien
-            de piscines, jets d'eau et solutions aquatiques
-            modernes au Burkina Faso.
-        </p>
-
-        <div class="hero-buttons">
-
-            <a href="#services" class="btn btn-primary">
-                DÉCOUVRIR NOS SERVICES
-            </a>
-
-            <a href="#contact" class="btn btn-yellow">
-                NOUS CONTACTER
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================================
-     A PROPOS
-================================= -->
-
-<section class="about" id="apropos">
-
-    <div class="section-container">
-
-        <div class="section-title">
-
-            <h2>
-                À PROPOS DE NOUS
-            </h2>
-
-            <div class="title-line"></div>
-
-            <p>
-                Une vision moderne de l'aménagement aquatique
-            </p>
-
-        </div>
-
-
-        <div class="about-grid">
-
-            <div class="about-image">
-            </div>
-
-
-            <div class="about-text">
-
-                <h3>
-                    AQUATECH BIO VISION
-                </h3>
-
-                <p>
-                    AQUATECH BIO VISION est une entreprise spécialisée
-                    dans les solutions aquatiques et l'aménagement
-                    d'espaces modernes autour de l'eau.
-                </p>
-
-                <p>
-                    Nous mettons notre savoir-faire au service des
-                    particuliers, entreprises, hôtels, résidences,
-                    collectivités et établissements professionnels.
-                </p>
-
-                <ul class="about-list">
-
-                    <li>
-                        Conception de piscines modernes
-                    </li>
-
-                    <li>
-                        Installation de jets d'eau
-                    </li>
-
-                    <li>
-                        Aménagement d'espaces aquatiques
-                    </li>
-
-                    <li>
-                        Entretien et rénovation
-                    </li>
-
-                    <li>
-                        Conseils et accompagnement
-                    </li>
-
-                </ul>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================================
-     SERVICES
-================================= -->
-
-<section class="services" id="services">
-
-    <div class="section-container">
-
-        <div class="section-title">
-
-            <h2>
-                NOS SERVICES
-            </h2>
-
-            <div class="title-line"></div>
-
-            <p>
-                Des solutions adaptées à vos projets
-            </p>
-
-        </div>
-
-
-        <div class="services-grid">
-
-
-            <div class="service-card">
-
-                <div class="service-icon">
-                    💦
-                </div>
-
-                <h3>
-                    Piscines
-                </h3>
-
-                <p>
-                    Conception et réalisation de piscines
-                    modernes, élégantes et adaptées à votre espace.
-                </p>
-
-            </div>
-
-
-            <div class="service-card">
-
-                <div class="service-icon">
-                    ⛲
-                </div>
-
-                <h3>
-                    Jets d'eau
-                </h3>
-
-                <p>
-                    Installation de jets d'eau décoratifs
-                    pour valoriser vos espaces.
-                </p>
-
-            </div>
-
-
-            <div class="service-card">
-
-                <div class="service-icon">
-                    🏗️
-                </div>
-
-                <h3>
-                    Aménagement
-                </h3>
-
-                <p>
-                    Création d'espaces aquatiques harmonieux
-                    pour maisons, hôtels et entreprises.
-                </p>
-
-            </div>
-
-
-            <div class="service-card">
-
-                <div class="service-icon">
-                    🔧
-                </div>
-
-                <h3>
-                    Entretien
-                </h3>
-
-                <p>
-                    Entretien, nettoyage, maintenance et
-                    rénovation de vos installations.
-                </p>
-
-            </div>
-
-
-            <div class="service-card">
-
-                <div class="service-icon">
-                    ⚙️
-                </div>
-
-                <h3>
-                    Équipements
-                </h3>
-
-                <p>
-                    Solutions techniques et équipements
-                    destinés à améliorer vos installations.
-                </p>
-
-            </div>
-
-
-            <div class="service-card">
-
-                <div class="service-icon">
-                    💡
-                </div>
-
-                <h3>
-                    Conseil
-                </h3>
-
-                <p>
-                    Accompagnement personnalisé depuis
-                    l'idée jusqu'à la réalisation du projet.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================================
-     VIDEOS
-================================= -->
-
-<section class="videos" id="videos">
-
-    <div class="section-container">
-
-        <div class="section-title">
-
-            <h2>
-                NOS VIDÉOS
-            </h2>
-
-            <div class="title-line"></div>
-
-            <p>
-                Découvrez nos projets et nos réalisations en vidéo
-            </p>
-
-        </div>
-
-
-        <p class="video-intro">
-
-            Présentez ici vos réalisations, vos chantiers,
-            vos piscines, vos jets d'eau ou vos démonstrations.
-
-        </p>
-
-
-        <div class="video-grid">
-
-
-            <!-- VIDEO 1 -->
-
-            <div class="video-card">
-
-                <video controls poster="video1.jpg">
-
-                    <source src="video1.mp4" type="video/mp4">
-
-                    Votre navigateur ne supporte pas la lecture vidéo.
-
-                </video>
-
-                <div class="video-content">
-
-                    <h3>
-                        Réalisation AQUATECH
-                    </h3>
-
-                    <p>
-                        Présentation d'une réalisation de
-                        AQUATECH BIO VISION.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <!-- VIDEO 2 -->
-
-            <div class="video-card">
-
-                <video controls poster="video2.jpg">
-
-                    <source src="video2.mp4" type="video/mp4">
-
-                    Votre navigateur ne supporte pas la lecture vidéo.
-
-                </video>
-
-                <div class="video-content">
-
-                    <h3>
-                        Projet aquatique
-                    </h3>
-
-                    <p>
-                        Découvrez notre savoir-faire
-                        dans l'aménagement aquatique.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <!-- VIDEO 3 -->
-
-            <div class="video-card">
-
-                <video controls poster="video3.jpg">
-
-                    <source src="video3.mp4" type="video/mp4">
-
-                    Votre navigateur ne supporte pas la lecture vidéo.
-
-                </video>
-
-                <div class="video-content">
-
-                    <h3>
-                        Piscine moderne
-                    </h3>
-
-                    <p>
-                        Une réalisation conçue pour offrir
-                        confort, esthétique et qualité.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <!-- VIDEO 4 -->
-
-            <div class="video-card">
-
-                <video controls poster="video4.jpg">
-
-                    <source src="video.mp4" type="video/mp4">
-
-                    Votre navigateur ne supporte pas la lecture vidéo.
-
-                </video>
-
-                <div class="video-content">
-
-                    <h3>
-                        Jet d'eau décoratif
-                    </h3>
-
-                    <p>
-                        Exemple de solution décorative
-                        proposée par AQUATECH BIO VISION.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================================
-     GALERIE
-================================= -->
-
-<section class="gallery" id="galerie">
-
-    <div class="section-container">
-
-        <div class="section-title">
-
-            <h2>
-                GALERIE PHOTO
-            </h2>
-
-            <div class="title-line"></div>
-
-            <p>
-                Quelques exemples de nos réalisations
-            </p>
-
-        </div>
-
-
-        <div class="gallery-grid">
-
-            <div class="gallery-item">
-                <img src="photo1.jpeg" alt="Piscine AQUATECH BIO VISION">
-            </div>
-
-            <div class="gallery-item">
-                <img src="photo2.jpeg" alt="Projet aquatique">
-            </div>
-
-            <div class="gallery-item">
-                <img src="photo3.jpeg" alt="Jet d'eau">
-            </div>
-
-            <div class="gallery-item">
-                <img src="photo4.jpeg" alt="Piscine moderne">
-            </div>
-
-            <div class="gallery-item">
-                <img src="photo5.jpeg" alt="Aménagement aquatique">
-            </div>
-
-            <div class="gallery-item">
-                <img src="photo6.jpeg" alt="Réalisation AQUATECH">
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================================
-     REALISATIONS
-================================= -->
-
-<section class="projects" id="realisations">
-
-    <div class="section-container">
-
-        <div class="section-title">
-
-            <h2>
-                NOS RÉALISATIONS
-            </h2>
-
-            <div class="title-line"></div>
-
-            <p>
-                Des projets pensés pour transformer vos espaces
-            </p>
-
-        </div>
-
-
-        <div class="projects-grid">
-
-
-            <div class="project-card">
-
-                <img src="photo.jpeg"
-                     alt="Piscine résidentielle">
-
-                <div class="project-card-content">
-
-                    <h3>
-                        Piscines résidentielles
-                    </h3>
-
-                    <p>
-                        Des piscines conçues pour apporter
-                        élégance et confort à votre habitation.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="project-card">
-
-                <img src="photop.png"
-                     alt="Jet d'eau">
-
-                <div class="project-card-content">
-
-                    <h3>
-                        Jets d'eau
-                    </h3>
-
-                    <p>
-                        Des installations décoratives pour
-                        embellir vos espaces.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="project-card">
-
-                <img src="photop1.jpeg"
-                     alt="Espace aquatique">
-
-                <div class="project-card-content">
-
-                    <h3>
-                        Espaces aquatiques
-                    </h3>
-
-                    <p>
-                        Des aménagements adaptés aux hôtels,
-                        entreprises et résidences.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================================
-     POURQUOI NOUS
-================================= -->
-
-<section class="advantages">
-
-    <div class="section-container">
-
-        <div class="section-title">
-
-            <h2>
-                POURQUOI CHOISIR AQUATECH BIO VISION ?
-            </h2>
-
-            <div class="title-line"></div>
-
-        </div>
-
-
-        <div class="advantages-grid">
-
-
-            <div class="advantage">
-
-                <strong>
-                    QUALITÉ
-                </strong>
-
-                <p>
-                    Nous privilégions des solutions
-                    fiables et durables.
-                </p>
-
-            </div>
-
-
-            <div class="advantage">
-
-                <strong>
-                    PROFESSIONNALISME
-                </strong>
-
-                <p>
-                    Une approche sérieuse de chaque projet.
-                </p>
-
-            </div>
-
-
-            <div class="advantage">
-
-                <strong>
-                    INNOVATION
-                </strong>
-
-                <p>
-                    Des solutions modernes adaptées
-                    aux nouvelles tendances.
-                </p>
-
-            </div>
-
-
-            <div class="advantage">
-
-                <strong>
-                    ACCOMPAGNEMENT
-                </strong>
-
-                <p>
-                    Nous vous accompagnons de la conception
-                    jusqu'à la réalisation.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================================
-     CONTACT
-================================= -->
-
-<section class="contact" id="contact">
-
-    <div class="section-container">
-
-        <div class="section-title">
-
-            <h2>
-                CONTACTEZ-NOUS
-            </h2>
-
-            <div class="title-line"></div>
-
-            <p>
-                Parlons de votre prochain projet
-            </p>
-
-        </div>
-
-
-        <div class="contact-grid">
-
-
-            <div class="contact-box">
-
-                <h3>
-                    AQUATECH BIO VISION 🇧🇫
-                </h3>
-
-                <div class="contact-item">
-
-                    <span>
-                        LOCALISATION
-                    </span>
-
-                    Burkina Faso
-
-                </div>
-
-
-                <div class="contact-item">
-
-                    <span>
-                        TÉLÉPHONE
-                    </span>
-
-                    <a href="tel:+22678052509">
-                        +226 74 44 33 33
-                    </a>
-
-                </div>
-
-
-                <div class="contact-item">
-
-                    <span>
-                        WHATSAPP
-                    </span>
-
-                    <a href="https://wa.me/22678052509"
-                       target="_blank">
-
-                        Écrivez-nous sur WhatsApp
-
-                    </a>
-
-                </div>
-
-
-                <div class="contact-item">
-
-                    <span>
-                        ACTIVITÉ
-                    </span>
-
-                    Piscines • Jets d'eau • Aménagement
-                    • Entretien • Solutions aquatiques
-
-                </div>
-
-            </div>
-
-
-            <div class="contact-box">
-
-                <h3>
-                    DEMANDEZ UN DEVIS
-                </h3>
-
-                <p style="font-weight:700; margin-bottom:20px;">
-
-                    Vous avez un projet de piscine,
-                    de jet d'eau ou d'aménagement aquatique ?
-
-                </p>
-
-                <p style="font-weight:700; margin-bottom:25px;">
-
-                    Contactez AQUATECH BIO VISION pour
-                    discuter de votre projet.
-
-                </p>
-
-                <a href="https://wa.me/22674443333"0"
-                   target="_blank"
-                   class="btn btn-yellow">
-
-                    DEMANDER UN DEVIS
-
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================================
-     WHATSAPP
-================================= -->
-
-<a class="whatsapp"
-   href="https://wa.me/22678052509"
-   target="_blank"
-   title="Contacter AQUATECH BIO VISION sur WhatsApp">
-
-    ☎
+</div>
 
 </a>
 
 
-<!-- ================================
+<nav>
+
+<a href="#accueil">
+Accueil
+</a>
+
+<a href="#apropos">
+À propos
+</a>
+
+<a href="#services">
+Services
+</a>
+
+<a href="#videos">
+Vidéos
+</a>
+
+<a href="#galerie">
+Galerie
+</a>
+
+<a href="#realisations">
+Réalisations
+</a>
+
+<a href="#contact">
+Contact
+</a>
+
+<span class="flag">
+🇧🇫
+</span>
+
+</nav>
+
+</div>
+
+</header>
+
+
+<!-- =========================
+     ACCUEIL
+========================= -->
+
+<section class="hero" id="accueil">
+
+<div class="hero-content">
+
+<h1>
+AQUATECH BIO VISION
+</h1>
+
+<h2>
+L'EXCELLENCE AU SERVICE DE L'EAU
+</h2>
+
+<p>
+
+Conception, réalisation, aménagement
+et entretien de piscines, jets d'eau
+et solutions aquatiques modernes
+au Burkina Faso.
+
+</p>
+
+
+<div class="hero-buttons">
+
+<a href="#services"
+class="btn btn-primary">
+
+DÉCOUVRIR NOS SERVICES
+
+</a>
+
+
+<a href="#contact"
+class="btn btn-yellow">
+
+NOUS CONTACTER
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     A PROPOS
+========================= -->
+
+<section class="about" id="apropos">
+
+<div class="section-container">
+
+<div class="section-title">
+
+<h2>
+À PROPOS DE NOUS
+</h2>
+
+<div class="title-line"></div>
+
+<p>
+Une vision moderne de l'aménagement aquatique
+</p>
+
+</div>
+
+
+<div class="about-grid">
+
+
+<div class="about-image">
+</div>
+
+
+<div class="about-text">
+
+<h3>
+AQUATECH BIO VISION
+</h3>
+
+<p>
+
+AQUATECH BIO VISION est une entreprise
+spécialisée dans les solutions aquatiques
+et l'aménagement d'espaces modernes
+autour de l'eau.
+
+</p>
+
+<p>
+
+Nous mettons notre savoir-faire au service
+des particuliers, entreprises, hôtels,
+résidences et collectivités.
+
+</p>
+
+
+<ul class="about-list">
+
+<li>
+Conception de piscines modernes
+</li>
+
+<li>
+Installation de jets d'eau
+</li>
+
+<li>
+Aménagement d'espaces aquatiques
+</li>
+
+<li>
+Entretien et rénovation
+</li>
+
+<li>
+Conseils et accompagnement
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section class="services" id="services">
+
+<div class="section-container">
+
+<div class="section-title">
+
+<h2>
+NOS SERVICES
+</h2>
+
+<div class="title-line"></div>
+
+<p>
+Des solutions adaptées à vos projets
+</p>
+
+</div>
+
+
+<div class="services-grid">
+
+
+<div class="service-card">
+
+<div class="service-icon">
+💦
+</div>
+
+<h3>
+Piscines
+</h3>
+
+<p>
+Conception et réalisation de piscines
+modernes et adaptées à votre espace.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">
+⛲
+</div>
+
+<h3>
+Jets d'eau
+</h3>
+
+<p>
+Installation de jets d'eau décoratifs
+pour valoriser vos espaces.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">
+🏗️
+</div>
+
+<h3>
+Aménagement
+</h3>
+
+<p>
+Création d'espaces aquatiques
+harmonieux et modernes.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">
+🔧
+</div>
+
+<h3>
+Entretien
+</h3>
+
+<p>
+Entretien, nettoyage, maintenance
+et rénovation.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">
+⚙️
+</div>
+
+<h3>
+Équipements
+</h3>
+
+<p>
+Solutions techniques et équipements
+pour vos installations.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">
+💡
+</div>
+
+<h3>
+Conseil
+</h3>
+
+<p>
+Accompagnement personnalisé pour
+vos projets aquatiques.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     VIDEOS
+========================= -->
+
+<section class="videos" id="videos">
+
+<div class="section-container">
+
+<div class="section-title">
+
+<h2>
+NOS VIDÉOS
+</h2>
+
+<div class="title-line"></div>
+
+<p>
+Découvrez nos projets et réalisations
+</p>
+
+</div>
+
+
+<p class="video-intro">
+
+Les vidéos sont configurées pour
+démarrer automatiquement, sans son,
+et se répéter en boucle.
+
+</p>
+
+
+<div class="video-grid">
+
+
+<!-- VIDEO 1 -->
+
+<div class="video-card">
+
+<video
+autoplay
+muted
+loop
+playsinline
+controls
+poster="video1.jpg">
+
+<source
+src="video.mp4"
+type="video/mp4">
+
+Votre navigateur ne supporte pas la vidéo.
+
+</video>
+
+<div class="video-content">
+
+<h3>
+Réalisation AQUATECH
+</h3>
+
+<p>
+Présentation d'une réalisation
+AQUATECH BIO VISION.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- VIDEO 2 -->
+
+<div class="video-card">
+
+<video
+autoplay
+muted
+loop
+playsinline
+controls
+poster="video2.jpg">
+
+<source
+src="video1.mp4"
+type="video/mp4">
+
+Votre navigateur ne supporte pas la vidéo.
+
+</video>
+
+<div class="video-content">
+
+<h3>
+Projet aquatique
+</h3>
+
+<p>
+Découvrez notre savoir-faire
+dans l'aménagement aquatique.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- VIDEO 3 -->
+
+<div class="video-card">
+
+<video
+autoplay
+muted
+loop
+playsinline
+controls
+poster="video3.jpg">
+
+<source
+src="video2.mp4"
+type="video/mp4">
+
+Votre navigateur ne supporte pas la vidéo.
+
+</video>
+
+<div class="video-content">
+
+<h3>
+Piscine moderne
+</h3>
+
+<p>
+Une réalisation conçue pour offrir
+confort, esthétique et qualité.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- VIDEO 4 -->
+
+<div class="video-card">
+
+<video
+autoplay
+muted
+loop
+playsinline
+controls
+poster="video4.jpg">
+
+<source
+src="video3.mp4"
+type="video/mp4">
+
+Votre navigateur ne supporte pas la vidéo.
+
+</video>
+
+<div class="video-content">
+
+<h3>
+Jet d'eau décoratif
+</h3>
+
+<p>
+Découvrez une solution décorative
+AQUATECH BIO VISION.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     GALERIE
+========================= -->
+
+<section class="gallery" id="galerie">
+
+<div class="section-container">
+
+<div class="section-title">
+
+<h2>
+GALERIE PHOTO
+</h2>
+
+<div class="title-line"></div>
+
+<p>
+Quelques exemples de nos réalisations
+</p>
+
+</div>
+
+
+<div class="gallery-grid">
+
+
+<div class="gallery-item">
+
+<img
+src="photo1.jpeg"
+alt="Piscine">
+
+</div>
+
+
+<div class="gallery-item">
+
+<img
+src="photo2.jpeg"
+alt="Projet aquatique">
+
+</div>
+
+
+<div class="gallery-item">
+
+<img
+src="photo3.jpeg"
+alt="Jet d'eau">
+
+</div>
+
+
+<div class="gallery-item">
+
+<img
+src="photo4.jpeg"
+alt="Piscine moderne">
+
+</div>
+
+
+<div class="gallery-item">
+
+<img
+src="photo5.jpeg"
+alt="Aménagement aquatique">
+
+</div>
+
+
+<div class="gallery-item">
+
+<img
+src="photo6.jpeg"
+alt="Réalisation">
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     REALISATIONS
+========================= -->
+
+<section class="projects" id="realisations">
+
+<div class="section-container">
+
+<div class="section-title">
+
+<h2>
+NOS RÉALISATIONS
+</h2>
+
+<div class="title-line"></div>
+
+<p>
+Des projets pensés pour transformer vos espaces
+</p>
+
+</div>
+
+
+<div class="projects-grid">
+
+
+<div class="project-card">
+
+<img
+src="photo3.jpeg"
+alt="Piscine résidentielle">
+
+<div class="project-card-content">
+
+<h3>
+Piscines résidentielles
+</h3>
+
+<p>
+Des piscines conçues pour apporter
+élégance et confort.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="project-card">
+
+<img
+src="photop.png"
+alt="Jet d'eau">
+
+<div class="project-card-content">
+
+<h3>
+Jets d'eau
+</h3>
+
+<p>
+Des installations décoratives
+pour embellir vos espaces.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="project-card">
+
+<img
+src="photop1.jpeg"
+alt="Espace aquatique">
+
+<div class="project-card-content">
+
+<h3>
+Espaces aquatiques
+</h3>
+
+<p>
+Des aménagements adaptés aux
+hôtels et résidences.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     AVANTAGES
+========================= -->
+
+<section class="advantages">
+
+<div class="section-container">
+
+<div class="section-title">
+
+<h2>
+POURQUOI NOUS CHOISIR ?
+</h2>
+
+<div class="title-line"></div>
+
+</div>
+
+
+<div class="advantages-grid">
+
+
+<div class="advantage">
+
+<strong>
+QUALITÉ
+</strong>
+
+<p>
+Des solutions fiables et durables.
+</p>
+
+</div>
+
+
+<div class="advantage">
+
+<strong>
+PROFESSIONNALISME
+</strong>
+
+<p>
+Une approche sérieuse de chaque projet.
+</p>
+
+</div>
+
+
+<div class="advantage">
+
+<strong>
+INNOVATION
+</strong>
+
+<p>
+Des solutions modernes.
+</p>
+
+</div>
+
+
+<div class="advantage">
+
+<strong>
+ACCOMPAGNEMENT
+</strong>
+
+<p>
+Un accompagnement personnalisé.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section class="contact" id="contact">
+
+<div class="section-container">
+
+<div class="section-title">
+
+<h2>
+CONTACTEZ-NOUS
+</h2>
+
+<div class="title-line"></div>
+
+<p>
+Parlons de votre prochain projet
+</p>
+
+</div>
+
+
+<div class="contact-grid">
+
+
+<div class="contact-box">
+
+<h3>
+AQUATECH BIO VISION 🇧🇫
+</h3>
+
+
+<div class="contact-item">
+
+<span>
+LOCALISATION
+</span>
+
+Burkina Faso
+
+</div>
+
+
+<div class="contact-item">
+
+<span>
+TÉLÉPHONE
+</span>
+
+<a href="tel:+22678052509">
+
++226 74 44 33 33
+
+</a>
+
+</div>
+
+
+<div class="contact-item">
+
+<span>
+WHATSAPP
+</span>
+
+<a
+href="https://wa.me/22678052509"
+target="_blank">
+
+Écrivez-nous sur WhatsApp
+
+</a>
+
+</div>
+
+
+<div class="contact-item">
+
+<span>
+ACTIVITÉ
+</span>
+
+Piscines • Jets d'eau • Aménagement
+• Entretien • Solutions aquatiques
+
+</div>
+
+</div>
+
+
+<div class="contact-box">
+
+<h3>
+DEMANDEZ UN DEVIS
+</h3>
+
+<p style="font-weight:700;margin-bottom:20px;">
+
+Vous avez un projet de piscine,
+de jet d'eau ou d'aménagement ?
+
+</p>
+
+<p style="font-weight:700;margin-bottom:20px;">
+
+Contactez AQUATECH BIO VISION
+pour discuter de votre projet.
+
+</p>
+
+
+<a
+href="https://wa.me/22678052509"
+target="_blank"
+class="btn btn-yellow">
+
+DEMANDER UN DEVIS
+
+</a>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     WHATSAPP
+========================= -->
+
+<a
+class="whatsapp"
+href="https://wa.me/22600000000"
+target="_blank"
+title="WhatsApp">
+
+☎
+
+</a>
+
+
+<!-- =========================
      FOOTER
-================================= -->
+========================= -->
 
 <footer>
 
-    <h3>
-        AQUATECH BIO VISION
-    </h3>
+<h3>
+AQUATECH BIO VISION
+</h3>
 
-    <div class="footer-flag">
+<div class="footer-flag">
 
-        <div class="footer-red"></div>
+<div class="footer-red"></div>
 
-        <div class="footer-green"></div>
+<div class="footer-green"></div>
 
-    </div>
+</div>
 
-    <p>
-        Solutions aquatiques professionnelles au Burkina Faso 🇧🇫
-    </p>
+<p>
+Solutions aquatiques professionnelles
+au Burkina Faso 🇧🇫
+</p>
 
-    <p style="margin-top:10px;">
-        © 2026 AQUATECH BIO VISION — Tous droits réservés.
-    </p>
+<p style="margin-top:8px;">
+
+© 2026 AQUATECH BIO VISION
+— Tous droits réservés.
+
+</p>
 
 </footer>
 
 
 </body>
-</html>
+
