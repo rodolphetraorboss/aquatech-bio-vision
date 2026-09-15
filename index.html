@@ -703,6 +703,23 @@ section {
     object-fit: cover;
 }
 
+.project-card-image {
+    width: 100%;
+    height: 190px;
+    overflow: hidden;
+}
+
+.project-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.project-card:hover .project-card-image img {
+    transform: scale(1.06);
+}
+
 .project-card-content {
 
     padding: 18px;
@@ -1376,6 +1393,42 @@ pour valoriser vos espaces.
 
 </div>
 
+<div class="service-card">
+
+<div class="service-icon">
+🌊
+</div>
+
+<h3>
+Cascades
+</h3>
+
+<p>
+Conception et réalisation de cascades
+aquatiques décoratives pour jardins,
+résidences, hôtels et espaces professionnels.
+</p>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-icon">
+⛲
+</div>
+
+<h3>
+Fontaines décoratives
+</h3>
+
+<p>
+Création de fontaines décoratives
+modernes et élégantes pour sublimer
+vos espaces extérieurs et intérieurs.
+</p>
+
+</div>
+
 
 <div class="service-card">
 
@@ -1501,12 +1554,33 @@ loop
 playsinline
 controls
 poster="video1.jpg">
+<h3>
+CASCADES
+</h3>
 
+<p>
+Découvrez notre savoir-faire
+dans l'aménagement aquatique.
+</p>
 <source
 src="video.mp4"
 type="video/mp4">
 
-Votre navigateur ne supporte pas la vidéo.
+<video
+autoplay
+muted
+loop
+playsinline
+controls
+poster="video1.jpg">
+
+<source
+src="video4.mp4"
+type="video/mp4">
+<p>
+Présentation d'une réalisation
+AQUATECH BIO VISION.
+</p>
 
 </video>
 
@@ -1819,6 +1893,52 @@ hôtels et résidences.
 
 </div>
 
+<div class="project-card">
+
+<div class="project-card-image">
+<img
+src="photo5.jpeg"
+alt="Cascade décorative">
+</div>
+
+<div class="project-card-content">
+
+<h3>
+Cascades décoratives
+</h3>
+
+<p>
+Des cascades élégantes pour créer
+une ambiance naturelle et apaisante.
+</p>
+
+</div>
+
+</div>
+
+<div class="project-card">
+
+<div class="project-card-image">
+<img
+src="photo6.jpeg"
+alt="Fontaine décorative">
+</div>
+
+<div class="project-card-content">
+
+<h3>
+Fontaines décoratives
+</h3>
+
+<p>
+Des fontaines modernes pour valoriser
+les jardins, hôtels, villas et espaces publics.
+</p>
+
+</div>
+
+</div>
+
 
 </div>
 
@@ -2087,4 +2207,3 @@ au Burkina Faso 🇧🇫
 
 
 </body>
-
